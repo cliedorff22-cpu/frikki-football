@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Friki Football — league home. Standings, matchups, rosters, draft board and the all-time record book, powered by Sleeper.">
+  <meta name="theme-color" content="#1a0f0a">
+
+  <title>Friki Football · League Home</title>
+
+  <!-- Tiki mask favicon, inlined so there is no extra request -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗿</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗿</text></svg>">
+
+  <!-- Lets league members add the page to their phone home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Friki Football">
+
+  <!-- Link preview when the URL gets shared in the league chat -->
+  <meta property="og:title" content="Friki Football · League Home">
+  <meta property="og:description" content="Standings, matchups, rosters, the draft board and the all-time record book.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">🗿</div>
+        <div class="brand-text">
+          <h1 id="brand-name">Friki Football</h1>
+          <p id="brand-tag">Loading&hellip;</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#/home"       data-view="home"><span class="ico">🏝</span>Home</a>
+        <a href="#/standings"  data-view="standings"><span class="ico">🏆</span>Standings</a>
+        <a href="#/matchups"   data-view="matchups"><span class="ico">🥊</span>Matchups</a>
+        <a href="#/rosters"    data-view="rosters"><span class="ico">📋</span>Rosters</a>
+        <a href="#/draft"      data-view="draft"><span class="ico">🎣</span>Draft</a>
+        <a href="#/moves"      data-view="moves"><span class="ico">🔄</span>Moves</a>
+        <a href="#/history"    data-view="history"><span class="ico">🍹</span>History</a>
+        <a href="#/records"    data-view="records"><span class="ico">🌋</span>Records</a>
+        <a href="#/h2h"        data-view="h2h"><span class="ico">⚔️</span>H2H</a>
+        <a href="#/managers"   data-view="managers"><span class="ico">🌴</span>Managers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <div class="loading">
+      <div class="spinner"></div>
+      Mixing the drinks&hellip;
+    </div>
+  </main>
+
+  <footer>
+    <div class="tiki-rule" aria-hidden="true">🌴 🗿 🍹 🗿 🌴</div>
+    <div>
+      Live data from the
+      <a href="https://docs.sleeper.com/" target="_blank" rel="noopener">Sleeper API</a>.
+      Nothing here is entered by hand.
+    </div>
+    <div style="margin-top:6px">Refresh any time for the latest scores.</div>
+    <div class="footer-credit">Created and managed by Collin Liedorff</div>
+  </footer>
+
+  <!-- config.js first: app.js reads CONFIG on boot -->
+  <script src="config.js"></script>
+  <script src="assets/app.js"></script>
+
+</body>
+</html>
