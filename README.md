@@ -9,7 +9,7 @@ on a phone, a laptop, whatever.
 
 ## The link
 
-https://cliedorff22-cpu.github.io/Frikifootbal-league/
+https://cliedorff22-cpu.github.io/frikki-football/
 
 Share that with the league. Nothing to install, nothing to log into.
 
@@ -75,7 +75,7 @@ brackets exist for them anywhere Sleeper can reach. Only the champions
 carried over. The explanation shown under the table lives in
 `pastChampionsNote` in the same file; set it to `null` to hide it.
 
-To add a manager photo, drop the image in `docs/assets/managers/` and point
+To add a manager photo, drop the image in `assets/managers/` and point
 to it:
 
 ```js
@@ -85,13 +85,18 @@ photo: "assets/managers/collin.jpg",
 ## Files
 
 ```
-docs/
-  index.html          page shell and navigation
-  config.js           league ID + manager profiles — the only file you edit
-  assets/style.css    the tiki theme
-  assets/app.js       all the logic: API calls, routing, rendering
-  data/players.json   trimmed player names (id -> [name, position, team])
+index.html          page shell and navigation
+config.js           league ID + manager profiles — the only file you edit
+assets/style.css    the tiki theme
+assets/app.js       all the logic: API calls, routing, rendering
+data/players.json   trimmed player names (id -> [name, position, team])
 ```
+
+The `assets/` and `data/` folders matter — `index.html` loads
+`assets/style.css` and `assets/app.js` by those exact paths. If everything
+gets flattened into the root (easy to do by uploading files individually
+through GitHub's web UI), the page renders with no styling and no
+JavaScript. Upload folders, not loose files.
 
 `data/players.json` exists because Sleeper's full player endpoint is ~15 MB
 — too heavy for a phone on every visit. The trimmed copy is ~230 KB. It is
@@ -106,7 +111,7 @@ breaks.
 Any static file server works. From the repo root:
 
 ```bash
-python3 -m http.server 4173 --directory docs
+python3 -m http.server 4173
 ```
 
 Then open http://localhost:4173.
